@@ -70,3 +70,44 @@ class Watch {
 const watchTwo = new Watch()
 watchTwo.namewatch = 'Garmin'
 console.log(watchTwo.getNamewatch())
+
+
+// Extends class
+
+class Player {
+    static describe = 'I play 3 hours'
+
+    constructor (firstName, lastName) {
+        this.firstName = firstName
+        this.lastName = lastName
+    }
+}
+
+const playerOne = new Player('Jan', 'Kowalski')
+
+class AdminPlayer extends Player {
+    isAdmin = true
+}
+
+const adminPlayer = new AdminPlayer('Leszek', 'Kic')
+
+console.log(playerOne.firstName, playerOne.lastName)
+console.log(adminPlayer.firstName, adminPlayer.lastName, adminPlayer.isAdmin)
+
+// SUPER 
+class Swimming {
+    constructor (swim) {
+        this.swim = swim
+    }
+}
+
+class Running extends Swimming {
+    
+    constructor (swim, bike) {
+        super(swim)
+        this.bike = bike
+    }
+}
+
+const swimRun = new Running('pływałem Open Water', ['rower czasowy', 'rower szosowy'])
+console.log(swimRun)
