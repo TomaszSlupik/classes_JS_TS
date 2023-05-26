@@ -101,6 +101,7 @@ const weather =  new Weather ('słonecznie')
 
 console.log(weather.log)
 
+// Settters
 class NumberCheck {
     constructor(public checkName: string, private _score: number) {}
 
@@ -118,6 +119,7 @@ const numberCheck = new NumberCheck('Testowanie liczb', 20)
 
 numberCheck.scoreNumber = 1
 console.log(numberCheck)
+
 
 
 
