@@ -69,6 +69,7 @@ class Weather {
 }
 const weather = new Weather('słonecznie');
 console.log(weather.log);
+// Settters
 class NumberCheck {
     constructor(checkName, _score) {
         this.checkName = checkName;
@@ -86,3 +87,19 @@ class NumberCheck {
 const numberCheck = new NumberCheck('Testowanie liczb', 20);
 numberCheck.scoreNumber = 1;
 console.log(numberCheck);
+// Protected 
+class TestCheck {
+    constructor(nameTest) {
+        this.marks = 4;
+        this.nameTest = nameTest;
+    }
+}
+class TestWeb extends TestCheck {
+    testWeb() {
+        this.marks = 5;
+        return this.marks;
+    }
+}
+const testWebMay = new TestWeb('Test z TS');
+console.log(testWebMay);
+console.log(testWebMay.testWeb());

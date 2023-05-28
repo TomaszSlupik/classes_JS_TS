@@ -120,7 +120,26 @@ const numberCheck = new NumberCheck('Testowanie liczb', 20)
 numberCheck.scoreNumber = 1
 console.log(numberCheck)
 
+// Protected 
 
+class TestCheck {
 
+    nameTest: string
+    protected marks: number = 4
 
+    constructor (nameTest: string) {    
+        this.nameTest = nameTest
+    }
+}
 
+class TestWeb extends TestCheck {
+    testWeb () {
+        this.marks = 5
+        return this.marks
+    }
+}
+
+const testWebMay = new TestWeb('Test z TS')
+
+console.log(testWebMay)
+console.log(testWebMay.testWeb())
