@@ -103,3 +103,58 @@ class TestWeb extends TestCheck {
 const testWebMay = new TestWeb('Test z TS');
 console.log(testWebMay);
 console.log(testWebMay.testWeb());
+class Bike {
+    constructor(nameColor) {
+        this.nameColor = nameColor;
+    }
+}
+const myBike = new Bike('red');
+console.log(myBike.nameColor);
+class Sprint {
+    constructor(numberOfKm) {
+        this.numberOfKm = numberOfKm;
+    }
+}
+class Standard {
+    constructor(numberOfKm) {
+        this.numberOfKm = numberOfKm;
+    }
+}
+const sprint = new Sprint(20);
+const standard = new Standard(40);
+console.log(sprint);
+console.log(standard);
+class EnergyDrink {
+    constructor(nameDrink) {
+        this.nameDrink = nameDrink;
+    }
+    drinking() {
+        console.log(this.nameDrink);
+    }
+}
+const energydrink = new EnergyDrink('Red bull');
+console.log(energydrink.drinking());
+// Klasy abstrakcyjne 
+class WorkerDay {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    talk() {
+        console.log('Pracuje od Pon do Piątku');
+    }
+}
+class FullTimeWork extends WorkerDay {
+    getPay() {
+        return 100;
+    }
+}
+class PartTimeWork extends WorkerDay {
+    getPay() {
+        return 70;
+    }
+}
+const fullTime = new FullTimeWork('Tom', 'Kowalski');
+console.log(fullTime.firstName, fullTime.lastName, fullTime.getPay());
+const partTime = new PartTimeWork('Jan', 'Kowal');
+console.log(partTime.firstName, partTime.lastName, partTime.getPay());
